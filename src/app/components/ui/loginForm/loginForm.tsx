@@ -18,7 +18,7 @@ const LoginForm = () => {
     strongPassword: false,
     passwordDescription: "Password is Empty",
   });
-  const [passwordBackground, setPasswordBackground] = useState("gray");
+  const [passwordBackground, setPasswordBackground] = useState("gray-bg");
 
   useEffect(() => {
     setPasswordBackground(calculatePasswordStrength(data.password));
@@ -59,19 +59,19 @@ const LoginForm = () => {
 
   const calculatePasswordStrength = (password: string) => {
     if (password.length === 0) {
-      return "gray";
+      return "gray-bg";
     }
     if (password.length < 8) {
-      return "danger";
+      return "danger-bg";
     }
     if (
       passwordData.easyPassword &&
       passwordData.mediumPassword &&
       passwordData.strongPassword
     ) {
-      return "success";
+      return "success-bg";
     }
-    return "warning";
+    return "warning-bg";
   };
 
   const validatePasswordStrength = (event: ChangeEvent<HTMLInputElement>) => {

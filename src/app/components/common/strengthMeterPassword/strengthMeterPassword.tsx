@@ -9,9 +9,9 @@ const StrengthMeterPassword = ({
     passwordData;
 
   const getClasses = (id: string) => {
-    if (passwordBackground === "gray") return "gray-bg";
-    if (passwordBackground === "success") return "success-bg";
-    if (passwordBackground === "danger") return "danger-bg";
+    if (passwordBackground === "gray-bg") return "gray-bg";
+    if (passwordBackground === "success-bg") return "success-bg";
+    if (passwordBackground === "danger-bg") return "danger-bg";
 
     if (easyPassword && !mediumPassword) {
       if (id === "easy-password") return "danger-bg";
