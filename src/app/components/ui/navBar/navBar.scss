@@ -1,0 +1,29 @@
+@import "../../../styles/variables.scss";
+
+.navigation {
+	height: 90px;
+	color: #fff;
+	background: $main-background-gradient;
+	padding: 0px 25px;
+	&__list {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		gap: 25px;
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		border-bottom: 3px solid transparent;
+		border-radius: 10px;
+		padding: 0px 10px;
+		font-size: 38px;
+		&:hover {
+			border-bottom-color: #fff;
+			transition: border 0.5s ease;
+		}
+		&-active {
+			border-bottom: 3px solid #fff;
+		}
+	}
+}
